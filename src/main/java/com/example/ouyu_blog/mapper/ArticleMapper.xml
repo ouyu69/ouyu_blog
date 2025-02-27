@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.ouyu_blog.dao.ArticleDao">
+
+    <insert id="addArticle" parameterType="com.example.ouyu_blog.entity.Article">
+        insert into article
+            (id,title,text)
+        values(#{id},#{title},#{text})
+    </insert>
+
+    <select id="findAllArticle"
+            resultType="com.example.ouyu_blog.entity.Article">
+        select * from article
+    </select>
+
+</mapper>
